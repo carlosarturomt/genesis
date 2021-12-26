@@ -1,0 +1,149 @@
+//- V A R I A B L E S
+-var titulo = "Génesis"
+-var titlesnav = ["Inicio", "Servicios", "Productos", "Galeria", "Contacto"]
+
+//- M I X I N 
+//- H O M E P A G E  - H E A H D
+mixin homepage_head-bootstrap(descripcion, sitename, imagen, title)
+	head 
+		meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="author" content="carlosArturoMT")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		meta(name="author" content="carlosArturoMT")
+		meta(name="DC.creator" content="carlosArturoMT")
+		meta(name="copyright" content="carlosArturoMT")
+		meta(name="description"	content= descripcion)
+		meta(property="og:site_name" content=sitename)
+		meta(property="og:title" content=sitename)
+		meta(property="og:description" content=descripcion)
+		meta(property="og:image" content=imagen)
+		meta(property="og:image:url" content=imagen)
+		meta(property="og:url" content="https://DeTexcoco.com")
+		meta(property="og:type" content="blog")
+		meta(itemprop="image" content=imagen)
+		meta(name="twitter:image"	content=imagen)
+		meta(itemprop="image" content=imagen)
+		link(rel="image_src"	href=imagen)
+		title= title
+		link(rel="preconnect" href="https://fonts.googleapis.com")
+		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet")
+		link(rel="icon" type="image/png" href="../../assets/imgs/JFelipeTM_redondo.png")
+		link(rel="stylesheet" href="../../css/sass/dist/styles.css")
+		link(rel="stylesheet" href="../../css/sass/dist/animaciones.css")
+		link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous")
+
+//- H O M E P A G E  - H E A H D
+mixin homepage_head(descripcion, sitename, imagen, title)
+	head 
+		meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="author" content="carlosArturoMT")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		meta(name="author" content="carlosArturoMT")
+		meta(name="DC.creator" content="carlosArturoMT")
+		meta(name="copyright" content="carlosArturoMT")
+		meta(name="description"	content= descripcion)
+		meta(property="og:site_name" content=sitename)
+		meta(property="og:title" content=sitename)
+		meta(property="og:description" content=descripcion)
+		meta(property="og:image" content=imagen)
+		meta(property="og:image:url" content=imagen)
+		meta(property="og:url" content="https://DeTexcoco.com")
+		meta(property="og:type" content="blog")
+		meta(itemprop="image" content=imagen)
+		meta(name="twitter:image"	content=imagen)
+		meta(itemprop="image" content=imagen)
+		link(rel="image_src"	href=imagen)
+		title= title
+		link(rel="preconnect" href="https://fonts.googleapis.com")
+		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet")
+		link(rel="icon" type="image/png" href="../../assets/imgs/JFelipeTM_redondo.png")
+		link(rel="stylesheet" href="../../css/sass/dist/styles.css")
+		link(rel="stylesheet" href="../../css/sass/dist/animaciones.css")
+
+//- H O M E P A G E  - H E A D E R
+mixin header
+	header 
+		nav(x-data="{ open: false }")
+			a(href="index.html"): .flex 
+				img(src="../../assets/imgs/JFelipeTM_recText_trans.png" alt="Logo")
+			.equiv(@click="open = true") &equiv;
+			.toggle(x-show="open" @click.away="open = false")
+				ul
+					li: a(href="index.html")=titlesnav[0]
+					li: a(href="#")=titlesnav[1]
+					li: a(href="#")=titlesnav[2]
+					li: a(href="#")=titlesnav[3]
+					li: a(href="index.html#contact")=titlesnav[4]
+			ul.hidden
+				li: a(href="index.html")=titlesnav[0]
+				li: a(href="#")=titlesnav[1]
+				li: a(href="#")=titlesnav[2]
+				li: a(href="#")=titlesnav[3]
+				li: a(href="index.html#contact")=titlesnav[4]
+
+//- F O R M - D A T E
+mixin form_simple(nombreprof, email)
+	form(action="../../form.php" method="POST")
+		h4 Contáctanos
+		.container-inputs
+			input(type="text" hidden name="profesionista" value=nombreprof)
+			input(type="email" hidden  name="destino1" value=email)
+			label(for="name") Nombre 
+			input(type="text" placeholder="Name" name="nombre" autocomplete="on" required)
+			label(for="email") Email
+			input(type="email" placeholder="Email" name="correo" autocomplete="email")
+			label(for="phone") Teléfono
+			input(type="phone" placeholder="Phone" name="numero" autocomplete="tel" required)
+			label(for="text") Mensaje
+			textarea(cols="45" rows="4" name="mensaje" placeholder="Message" required)
+		input.bttn(type="submit" name="btn-submit" value="Enviar") 
+
+//- B U T T O N - F L O A T
+mixin button_wh(numero)
+	.button__WhatsApp: a(href="https://api.whatsapp.com/send?phone=52"+numero target="_blank" rel="noopener"): img.button__WhatsApp--home(src="https://detexcoco.com/assets/icons/whatsapp.png" alt="boton WhatsApp")
+
+//- C A R D 
+mixin card(clase, img, title, description, price, url)
+	figure 
+		div: img(src=img alt=title class=clase)
+		div 
+			h3=title 
+			figcaption=description
+			p="MXN "+price
+			p ★★★★★
+			a(href=url target="_blank" rel="noopener noreferrer"):  span.trolley
+
+//- C A R D - S I M P L E 
+mixin card-simple(img, title, price, url)
+	figure 
+		div: img(src=img alt=title)
+		div 
+			h3=title 
+			p="MXN "+price
+			//- a(href=url target="_blank" rel="noopener noreferrer"):  span.trolley
+
+//- C A R D | P R E S E N T A T I O N
+mixin card-presentation(id, img, title, description)
+	figure.presentation.hidden0(id=id)
+		div: img(src=img alt=title)
+		div 
+			h4=title 
+			figcaption=description
+
+//- C A R D | M E N U
+mixin card-menu(img, title, productPrice1, productPrice2, productPrice3)
+	figure.menu
+		div: img(src=img alt=title)
+		div 
+			h4=title 
+			p=productPrice1
+			p=productPrice2
+			p=productPrice3
+ 
+//- B U T T O N - F L O A T
+mixin button_wh(numero)
+	.button__WhatsApp.expandUp: a(href="https://api.whatsapp.com/send?phone=52"+numero target="_blank" rel="noopener"): img.button__WhatsApp--home.floating(src="https://detexcoco.com/assets/icons/whatsapp.png", alt="boton WhatsApp")

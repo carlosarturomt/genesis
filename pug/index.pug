@@ -1,0 +1,73 @@
+extend components/template-bootstrap.pug
+block contenidos
+  +homepage_head-bootstrap('Génesis es un salón donde promovemos la estética y la belleza del arte en todas las personas, cumpliendo sus objetivos referentes a los estándares de la banguardía de la moda.', 'Salón de Belleza Génesis', 'https://genesis.detexcoco.com/assets/imgs/JFelipeTM_cuadrado.png', 'Génesis | Hair Studio')
+  body 
+    +header 
+    main
+      //- - - - - C A R O U S E L - B O O T S T R A P - - - - -
+      .carousel.slide#carouselExampleCaptions(data-bs-ride="carousel")
+        .carousel-indicators
+          button(type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
+          button(type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2")
+          button(type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3")
+
+        .carousel-inner
+          .carousel-item.active
+            img.d-block.cover-80(src="../../assets/imgs/background/boys-in-bristol.jpg" alt="Café con logo de Sorbito")
+            .carousel-caption.d-md-block.d-none
+              h5 Salón de Belleza
+              p Génesis es un salón donde la estética y la belleza nos define como artistas con ustedes, cumpliendo su objetivo de lo que es la moda y vanguardía.
+
+          .carousel-item
+            img.d-block.cover-80(src="../../assets/imgs/background/cottonbro.jpg" alt="mesa de madera con café")
+            .carousel-caption.d-md-block
+              h5 Lo último den la Moda
+              p Contamos con una capacitación constante, donde nuestro trabajo es reconocido a nivel internacional.
+
+          .carousel-item
+            img.d-block.cover-80(src="../../assets/imgs/background/cottonbro-tinte.jpg" alt="café en grano con taza de café")
+            .carousel-caption.d-md-block
+              h5 Mereces lo Mejor
+              p Contamos con líneas de primer nivel, como Salerm Cosmetics, Lendan, Tahe y Loreal professionnel.
+
+        button.carousel-control-prev(type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev")
+          span.carousel-control-prev-icon(aria-hidden="true")
+          span.visually-hidden Previous
+
+        button.carousel-control-next(type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next")
+          span.carousel-control-next-icon(aria-hidden="true")
+          span.visually-hidden Next 
+
+      //- - - - - C A R D S - P R E S E N T A T I O N - - - - -
+      section: article: aside 
+        +card-presentation('fadeIn0','../../assets/imgs/team/jFelipeTM.jpeg', 'Jaime F. Trujano M.', 'Estilista profesional con años de experiencia y cursos a nivel internacional.')
+        +card-presentation('fadeIn1','../../assets/imgs/team/user.jpeg', 'Mariela B. Trujano M.', 'Esteticista profesional especializada en pedicure y manicure.')
+        +card-presentation('fadeIn2','../../assets/imgs/team/user.jpeg', 'Joe F. Trujano D.', 'Barbero con cursos a nivel nacional, con participación en competencia amateur.')
+
+      section: article.flex 
+        aside.flex: img.opacity-05(src="../../assets/imgs/team/jFelipeTM_vista_frente.jpeg" alt="JFelipe Eleggante")
+        hgroup.width-50
+          h4 Sobre nosotros
+          p Somos un equipo de personas amantes de los buenos productos de belleza, promoviendo las nuevas generaciones que son parte de líneas exclusivas y naturales, procurando ofrecer siempre lo mejor.
+
+      section: article: img.cover-middle(src="../../assets/imgs/background/nick-demou.jpg" alt="Herramienta de trabajo")
+
+      section: article.flex 
+        hgroup.width-60
+          h4 Nuestros Servicios
+          p En Génes encontrarás una diversidad completa de lo que necesitas, ya sea; cortes, color, tratamientos, ampolletería, manicure, pedicure, depilación, barbería...
+          a(href="productos.html") Ver más
+        aside.flex: img.opacity-06(src="../../assets/imgs/background/cottonbro-shampoo.jpg" alt="")
+
+      section: article: img#fadeIn3.hidden0.cover-buy( src="../../assets/imgs/JFelipeTM_cuadrado_trans.png" alt="")
+
+      //- - - - - M A P - F O R M - - - - - 
+      section#contact: article.flex1
+        aside.flex1__aside
+          h4 Dirección
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15043.482510830263!2d-98.88940078411211!3d19.504201063184205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e651d0000001%3A0xec3b2b1a05eddd1a!2sMercado%20Soriana%20Texcoco%20Aeropuerto!5e0!3m2!1ses-419!2smx!4v1640235307680!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" title="Mapa de GoogleMaps para llegar a Sorbito Café")
+        aside.flex1__aside
+          +form_simple('Salón Génesis', 'lachanssonethan0330@gmail.com')
+
+        //- B U T T O N - F L O A T
+        +button_wh('5575526661')

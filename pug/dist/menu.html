@@ -1,0 +1,122 @@
+<!DOCTYPE html >
+<html lang="es">
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="carlosArturoMT"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="author" content="carlosArturoMT"/>
+    <meta name="DC.creator" content="carlosArturoMT"/>
+    <meta name="copyright" content="carlosArturoMT"/>
+    <meta name="description" content="Sorbito Café es una tienda de Café, productos derivados del café elaborados artesanalmente en Veracruz, México. En esta página encontrarás nuestro menú."/>
+    <meta property="og:site_name" content="Menú de Sorbito Café"/>
+    <meta property="og:title" content="Menú de Sorbito Café"/>
+    <meta property="og:description" content="Sorbito Café es una tienda de Café, productos derivados del café elaborados artesanalmente en Veracruz, México. En esta página encontrarás nuestro menú."/>
+    <meta property="og:image" content="https://sorbitocafe.detexcoco.com/assets/imgs/menu/coffee-frappe.jpg"/>
+    <meta property="og:image:url" content="https://sorbitocafe.detexcoco.com/assets/imgs/menu/coffee-frappe.jpg"/>
+    <meta property="og:url" content="https://DeTexcoco.com"/>
+    <meta property="og:type" content="blog"/>
+    <meta itemprop="image" content="https://sorbitocafe.detexcoco.com/assets/imgs/menu/coffee-frappe.jpg"/>
+    <meta name="twitter:image" content="https://sorbitocafe.detexcoco.com/assets/imgs/menu/coffee-frappe.jpg"/>
+    <meta itemprop="image" content="https://sorbitocafe.detexcoco.com/assets/imgs/menu/coffee-frappe.jpg"/>
+    <link rel="image_src" href="https://sorbitocafe.detexcoco.com/assets/imgs/menu/coffee-frappe.jpg"/>
+    <title>Sorbito Café | Menú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="../../assets/icons/logo1_Sorbito-Cafe.png"/>
+    <link rel="stylesheet" href="../../css/sass/dist/styles.css"/>
+    <link rel="stylesheet" href="../../css/sass/dist/animaciones.css"/>
+  </head>
+  <body> 
+    <header> 
+      <nav x-data="{ open: false }"><a href="index.html">
+          <div class="flex"> <img src="../../assets/icons/logoSorbito_text1.png" alt="Logo"/></div></a>
+        <div class="equiv" @click="open = true">&equiv;</div>
+        <div class="toggle" x-show="open" @click.away="open = false">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="index.html#contact">Contacto</a></li>
+          </ul>
+        </div>
+        <ul class="hidden">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="promociones.html">Promociones</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main> 
+      <section class="flex">
+        <article class="top-5">
+          <hgroup> 
+            <h1>TIENDA DE CAFÉ</h1>
+            <h2>Nuestro Menú </h2>
+          </hgroup>
+          <aside> 
+            <figure class="menu">
+              <div><img src="../../assets/imgs/menu/juice.jpg" alt="ESPECIALES"/></div>
+              <div> 
+                <h4>ESPECIALES</h4>
+                <p>Ponche de Frutas.........$45.00</p>
+                <p>Cerveza de Café...........$90.00</p>
+                <p>Licor de Café..............$180.00</p>
+              </div>
+            </figure>
+            <figure class="menu">
+              <div><img src="../../assets/imgs/menu/coffee-frappe.jpg" alt="FRAPPÉ"/></div>
+              <div> 
+                <h4>FRAPPÉ</h4>
+                <p>Frappé Clásico..............$45.00</p>
+                <p>Frappé Galleta..............$50.00</p>
+                <p>Frappé Moka.................$50.00</p>
+              </div>
+            </figure>
+            <figure class="menu">
+              <div><img src="../../assets/imgs/menu/coffee.jpg" alt="CAFÉ"/></div>
+              <div> 
+                <h4>CAFÉ</h4>
+                <p>Café Americano............$25.00</p>
+                <p>Café con Leche.............$35.00</p>
+                <p>Café Latte......................$45.00</p>
+              </div>
+            </figure>
+            <figure class="menu">
+              <div><img src="../../assets/imgs/menu/cookies.jpg" alt="POSTRES"/></div>
+              <div> 
+                <h4>POSTRES</h4>
+                <p>Galletas Artesanales...$35.00</p>
+                <p>Tartaletas Caseras......$35.00</p>
+                <p>Buñuelos Caseros........$35.00</p>
+              </div>
+            </figure>
+          </aside>
+        </article>
+      </section>
+      <div class="button__WhatsApp expandUp"><a href="https://api.whatsapp.com/send?phone=525514030520" target="_blank" rel="noopener"><img class="button__WhatsApp--home floating" src="https://detexcoco.com/assets/icons/whatsapp.png" alt="boton WhatsApp"/></a></div>
+    </main>
+  </body>
+  <footer>
+    <section> 
+      <aside> <img src="../../assets/icons/logo_Sorbito-Cafe.png" alt="logo completo de Sorbito Café"/>
+        <p>Puedes encontrarnos en Texcoco, Estado de México.</p>
+        <p>"Con un sorbo nos conocerás; con dos, jamás nos olvidarás" (CaféVictoria)</p>
+      </aside>
+      <aside> 
+        <p>Síguenos en nuestras redes sociales</p><a href="https://twitter.com/SorbitoCafe" target="_blank" rel="noopener noreferrer"><img src="../../assets/icons/twitter.png" alt="logo twitter"/></a><a href="https://www.facebook.com/SorbitoCafe2021/" target="_blank" rel="noopener noreferrer"><img src="../../assets/icons/facebook.png" alt="logo facebook"/></a><a href="https://www.instagram.com/sorbito_cafe/" target="_blank" rel="noopener noreferrer"><img src="../../assets/icons/instagram.png" alt="logo instagram"/></a>
+      </aside>
+    </section>
+    <section> 
+      <h5><span>&copy</span><span>2021 </span><span> SorbitoCafé</span></h5><small>Desarrollo por<a href="https://detexcoco.com/profesionistas/otros/mexico/carlos-arturo-miranda-trujano"> CarlosArturoMT</a></small>
+    </section>
+  </footer>
+</html>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" rossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+<script src="../../js/jquery-3.5.1.min.js"></script>
+<script src="../../js/animaciones.js"></script>
